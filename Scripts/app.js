@@ -152,7 +152,7 @@ let app;
                         LoadPageContent("mainContent", "./Views/content/login.html", DisplayLoginContent);
                         break;
                     case "taskList":
-                        LoadPageContent("mainContent", "task-list.html", DisplayTaskList);
+                        LoadPageContent("mainContent", "./task-list.html", DisplayTaskList);
                         break;
                 }
             }); 
@@ -453,7 +453,7 @@ let app;
         // Check what the target id is
         if (e.target.id === "taskListButton") {
             // Use the LoadPageContent function to load up the tasklist content
-            LoadPageContent("mainContent", "./Views/content/tasklist.html", DisplayTaskList)
+            LoadPageContent("mainContent", "./task-list.html", DisplayTaskList)
         }
     });
 
