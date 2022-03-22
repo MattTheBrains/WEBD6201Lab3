@@ -130,7 +130,7 @@ let app;
 
         for (const child of children) {
             navLinks[child.id]  = document.getElementById(child.id);
-             navLinks[child.id].children[0].addEventListener("click", function(){
+            navLinks[child.id].children[0].addEventListener("click", function(){
                 switch(child.id)
                 {
                     case "home":
@@ -150,6 +150,9 @@ let app;
                         break; 
                     case "login":
                         LoadPageContent("mainContent", "./Views/content/login.html", DisplayLoginContent);
+                        break;
+                    case "taskList":
+                        LoadPageContent("mainContent", "task-list.html", DisplayTaskList);
                         break;
                 }
             }); 
@@ -414,7 +417,10 @@ let app;
         });
 
         // Task 1 b
+        function AddNewTask(){
 
+        };
+        
         $("ul").on("click", ".editButton", function(){
            let editText = $(this).parent().parent().children(".editTextInput");
            let text = $(this).parent().parent().text();
